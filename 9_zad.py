@@ -44,7 +44,7 @@ for i in data:
             print(c, i)
 """
 #---------------4-------------
-
+"""
 def krat_3(a):
     for i in a:
         if i % 3 == 0:
@@ -56,6 +56,41 @@ f = open("9.txt")
 data = [list(map(int, s.split())) for s in f]
 
 c = 0
+for i in data:
+    if krat_3(i):
+        i = sorted(i)
+        if (i[0] + i[1]) > i[-2]:
+            c += 1
+print(c)
+"""
+#----------5-----------
+'''
+f = open("9.txt")
+
+data = [list(map(int, s.split())) for s in f]
+
+c = 0
+for i in data:
+    c += 1
+    cntr = [i.count(x) for x in i]
+    if cntr.count(2) == 2 and cntr.count(1) == 4:
+        if i.count(min(i)) == 1:
+            last = c
+print(last)
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
