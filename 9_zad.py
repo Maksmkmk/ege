@@ -78,13 +78,22 @@ for i in data:
             last = c
 print(last)
 '''
+#-------------6------------
+f = open("9.txt")
 
+data = [list(map(int, s.split())) for s in f]
 
-
-
-
-
-
+c = 0
+for i in data:
+    c += 1
+    cntr = [i.count(x) for x in i]
+    if cntr.count(2) == 4 and cntr.count(1) == 3:
+        nepov = [x for x in i if i.count(x) == 1]
+        pov = [x for x in i if i.count(x) > 1]
+        sr_pov = sum(pov) / len(pov)
+        if sr_pov < max(nepov):
+            print(c)
+            break
 
 
 

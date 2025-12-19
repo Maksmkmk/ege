@@ -174,6 +174,7 @@ for ip in net:
         print(ip, ip[-8:], ip[-8:].count("1"), int(ip[-8:], 2)) 
 '''
 #---------14--------
+"""
 from ipaddress import *
 
 net = ip_network("195.102.65.64/255.255.255.192")
@@ -184,29 +185,155 @@ for ip in net:
         c += 1
         print(ip, ip[-8:], ip[-8:].count("1"), int(ip[-8:], 2))
 print(c)
+"""
+#--------------------15---------
+"""
+from ipaddress import *
+
+net = ip_network("192.168.248.176/255.255.255.240", False)
+
+c = 0
+for ip in net:
+
+    ip = bin(int(ip))[2:]
+    if ip.count("0") == ip.count("1"):
+        c += 1
+print(c)
+"""
+#------------16---------------
+"""
+from ipaddress import *
+
+net = ip_network("222.121.128.0/255.255.224.0", False)
+
+c = 0
+for ip in net:
+
+    ip = bin(int(ip))[2:].zfill(32)
+    if ip[-1] == ip[-2]:
+        c += 1
+print(c)
+"""
+#----------17-----------
+"""
+from ipaddress import *
+
+net = ip_network("172.140.68.0/255.255.248.0", False)
+
+c = 0
+for ip in net:
+
+    ip = bin(int(ip))[2:]
+    if ip.count("0") > 15:
+        c += 1
+print(c)
+"""
+#--------------18--------------
+"""
+from ipaddress import *
+
+for x in range(10, 31):
+    net = ip_network(f"143.131.211.37/{x}", False)
+    c = 0
+    for ip in net:
+        ip = bin(int(ip))[2:]
+        if ip.count("1") == 10:
+            c += 1
+    if c == 15:
+        print(x)
+"""
+#-------------19--------------
+"""
+
+uzel 222.190.122.24
+sett 222.190.120.0
+
+bin(122) = 1111010
+bin(120) = 1111000
+3bitmask = 1111*00
+
+max mask = 11111111.11111111.11111000.00000000 = "0" * 11 =>
+=> 2 ** 11 variantov = 2048
+2048 - adres seti - shirokovesh - adres uzla = 2045
+
+"""
+#---------------20-------------
+"""
+from ipaddress import *
+
+net = ip_network("102.162.200.51/255.255.255.0", False).hosts()
+
+last = 0
+for ip in net:
+    last = ip
+
+# summa oktatov ip adressa
+print(sum(map(int, str(last).split("."))))
+"""
+#---------------21-------------
+"""
+from ipaddress import *
+
+net = ip_network("73.148.145.65/255.224.0.0", False).hosts()
+
+last = 0
+for ip in net:
+    last = ip
+print(str(last).replace(".", ""))
+"""
+#-------------22----------
+
+from ipaddress import *
+
+net = ip_network("172.16.192.0/255.255.192.0", False)
+
+c = 0
+for ip in net:
+    ip = bin(int(ip))[2:]
+    if ip.count("1") % 5 != 0:
+        c += 1
+print(c)
+
+#-----------23------------
+"""
+from ipaddress import *
+
+net = ip_network("158.214.121.40/255.255.255.224", False).hosts()
+
+for ip in net:
+    print(str(ip).replace(".", ""))
+    break
+"""
+#----------24-------------
+"""
+from ipaddress import *
+
+net = ip_network("5.2.5.0/255.255.0.0", False)
+
+c = 0
+for ip in net:
+    ip = bin(int(ip))[2:].zfill(32)
+    if ip.count("0") % 25 == 0:
+        c += 1
+print(c)
+"""
+#-----------25-----------
+"""
+uzl1 = 200.154.190.12
+uzl2 = 200.154.184.0
+
+uzl1 = 11001000.10011010.10111110.00001100
+uzl2 = 11001000.10011010.10111000.00000000
+mask = 11111111.11111111.11111000.00000000
+
+13003 15821412133 1820 20
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(bin(200), bin(154))
+print(190, bin(190))
+print(184, bin(184))
+print(12, bin(12))
+"""
 
 
 
