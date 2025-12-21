@@ -282,7 +282,7 @@ for ip in net:
 print(str(last).replace(".", ""))
 """
 #-------------22----------
-
+"""
 from ipaddress import *
 
 net = ip_network("172.16.192.0/255.255.192.0", False)
@@ -293,7 +293,7 @@ for ip in net:
     if ip.count("1") % 5 != 0:
         c += 1
 print(c)
-
+"""
 #-----------23------------
 """
 from ipaddress import *
@@ -334,6 +334,41 @@ print(190, bin(190))
 print(184, bin(184))
 print(12, bin(12))
 """
+#-----------25---------------
+"""
+print(212, bin(212)[2:])
+print(192, bin(192)[2:])
+print(20, bin(20)[2:].zfill(8))
+
+# sett = 205.154.11000000.00000000
+# uzel = 205.154.11010100.00010100
+# mask = 255.255.11100000.00000000
+
+print(int("11100000", 2))
+"""
+#----------------26--------------
+from ipaddress import *
+
+net = ip_network("115.192.0.0/255.192.0.0", False)
+
+c = 0
+for ip in net:
+    ip = bin(int(ip))[2:]
+    if ip.count("1") % 3 != 0:
+        c += 1
+print(c)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

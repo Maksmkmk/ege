@@ -147,6 +147,7 @@ for i in range(200):
 print(f(170))
 """
 #----------------10---------
+"""
 from functools import *
 
 @lru_cache(None)
@@ -160,10 +161,39 @@ for i in range(2500):
     f(i)
 
 print(f(45) - f(49))
+"""
+#--------------11----------------
+"""
+from functools import *
 
+@lru_cache(None)
+def f(n):
+    if n >= 10_000:
+        return n
+    if n % 2 == 0:
+        return f(n + 2) - 3
+    else:
+        return f(n + 2) + 1
 
+for i in range(100_000, 10, -1):
+    f(i)
 
+print(f(94) - f(80))
+"""
+#--------------12---------------
 
+from functools import *
+
+@lru_cache(None)
+def f(n):
+    if n < 5:
+        return 4
+    return 4 * f(n - 4)
+
+for i in range(5000):
+    f(i)
+
+print(f(4444)/f(4400))
 
 
 

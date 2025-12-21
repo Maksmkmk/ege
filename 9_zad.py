@@ -79,6 +79,7 @@ for i in data:
 print(last)
 '''
 #-------------6------------
+"""
 f = open("9.txt")
 
 data = [list(map(int, s.split())) for s in f]
@@ -94,6 +95,37 @@ for i in data:
         if sr_pov < max(nepov):
             print(c)
             break
+"""
+#----------7--------------
+
+f = open("9.txt")
+
+data = [list(map(int, s.split())) for s in f]
+
+c = 0
+for i in data:
+    cntr = [i.count(x) for x in i]
+    if cntr.count(1) == 6:
+        if 5 * (min(i) + max(i)) >= 3 * (sum(i) - max(i) - min(i)):
+            c += 1
+            print(c, i)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

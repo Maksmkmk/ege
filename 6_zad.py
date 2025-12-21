@@ -1,6 +1,6 @@
 #-----------1-------------
 """
-from turtle import*
+from turtle import *
 
 tracer(0)
 
@@ -23,9 +23,11 @@ for x in range(150):
         pd()
         dot(3)
 """
+from doctest import master
+
 #------------------2-----------
 """
-from turtle import*
+from turtle import *
 
 k = 50
 speed(1000)
@@ -75,7 +77,7 @@ mainloop()
 """
 #----------------------------3-------------
 """
-from turtle import*
+from turtle import *
 
 k = 20
 speed(1000)
@@ -115,7 +117,8 @@ for x in range(-3, 20):
 mainloop()
 """
 #---------4------------
-from turtle import*
+"""
+from turtle import *
 
 speed(10000)
 lt(90)
@@ -134,6 +137,122 @@ for x in range(-10, 10):
         pu()
 
 mainloop()
+"""
+#-------------5-------------
+"""
+from turtle import *
+
+speed(1000)
+
+k = 10
+
+for i in range(9):
+    fd(22 * k)
+    rt(90)
+    fd(6 * k)
+    rt(90)
+
+pu()
+
+fd(1 * k)
+rt(90)
+fd(5 * k)
+lt(90)
+
+pd()
+
+for i in range(9):
+    fd(53 * k)
+    rt(90)
+    fd(75 * k)
+    rt(90)
+
+tracer(0)
+
+for x in range(-70, 70):
+    for y in range(-70, 70):
+        pu()
+        goto(x * k, y * k)
+        dot(4)
+        pd()
+
+mainloop()
+"""
+#---------------6----------------
+"""
+from turtle import *
+
+k = 20
+speed(1000)
+
+for i in range(2):
+    fd(5 * k)
+    lt(90)
+    backward(13 * k)
+    lt(90)
+
+pu()
+
+backward(10 * k)
+rt(90)
+fd(9 * k)
+lt(90)
+
+pd()
+
+for i in range(2):
+    fd(11 * k)
+    rt(90)
+    fd(7 * k)
+    rt(90)
+
+for x in range(-10, 10):
+    for y in range(-20, 5):
+        pu()
+        goto(x * k, y * k)
+        dot(4)
+        pd()
+
+mainloop()
+"""
+#-----------7---------------
+
+from turtle import *
+
+z = 20
+pu()
+tracer(0)
+
+for x in range(-50, 50):
+    for y in range(-50, 50):
+        goto(x * z, y * z)
+        dot(3, "gray")
+
+goto(0, 0)
+x, y = 0, 0
+
+
+tracer(10)
+pd()
+for i in range(3):
+    x += 15 * z
+    y += 37 * z
+    goto(x, y)
+    x += -40 * z
+    y += -35 * z
+    goto(x, y)
+    x += -22 * z
+    y += 32 * z
+    goto(x, y)
+    x += 47 * z
+    y += -34 * z
+    goto(x, y)
+
+screensize(4000, 4000)
+
+mainloop()
+
+
 
 
 

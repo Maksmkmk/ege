@@ -239,7 +239,7 @@ for i in lst:
         print(c, i)
 """
 #--------------17-----------------
-
+"""
 from itertools import *
 
 a = set()
@@ -255,9 +255,9 @@ for i in permutations("01234567"):
             a.add(i)
 
 print(len(a))
-
+"""
 #---------------18--------------------
-
+"""
 from itertools import *
 
 c = 0
@@ -267,9 +267,9 @@ for i in product("ДГШЯБЖ", repeat=6):
         c += 1
 
 print(c)
-
+"""
 #----------------------19-------------
-
+"""
 from itertools import *
 
 a = set()
@@ -279,8 +279,9 @@ for i in permutations("СОТОЧКА"):
         a.add(i)
 
 print(len(a))
-
+"""
 #------------------------20---------------------
+"""
 from itertools import *
 
 c = 0
@@ -292,10 +293,30 @@ for i in product("01234567", repeat=5):
             c += 1
 
 print(c)
+"""
+#----------------21----------------
+"""
+from itertools import *
 
+c = 0
+for i in product("АГИЛМОРТ", repeat=5):
+    c += 1
+    i = "".join(i)
+    if c % 2 == 0 and i[0] != "А" and i[0] != "Г" and i.count("Р") >= 2:
+        print(c, i)
+        break
+"""
+#----------------22------------------
 
+from itertools import *
 
-
+c = 0
+for i in product("КОСУФ", repeat=5):
+    c += 1
+    i = "".join(i)
+    if "Ф" not in i and i.count("У") == 2:
+        last = c
+print(last)
 
 
 
