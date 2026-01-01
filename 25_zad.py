@@ -65,16 +65,7 @@ for i in range(135790, 163228 + 1):
         print(len(dividers(i)), sum(dividers(i)))
 """
 #-------------4--------------
-
-# for i in range(1):
-#     i = 1000125
-#     N = 0
-#     for j in range(3, i // 2 + 1, 2):
-#         if i % j == 0:
-#             N += j
-#     if N > i:
-#         print(i, N)
-
+"""
 def f(n):
     dividers = set()
     for i in range(2, int(n**0.5 + 1)):
@@ -97,10 +88,25 @@ for x in range(10**6, 10**6 + 10000):
         print(c, x, f(x))
     if c == 5:
         break
+"""
+#--------------5-----------------
+"""
+from fnmatch import *
 
+for i in range(2026, 10**10, 2026):
+    i = str(i)
+    if fnmatch(i, "53*23*0"):
+        print(i, int(int(i)/2026))
+"""
+#--------------6-------------
+from fnmatch import *
 
-
-
+c = 0
+for i in range(10000000038, 0, -42):
+    i = str(i)
+    if fnmatch(i, "48*15*0") and c < 6:
+        c += 1
+        print(c, i, int(i) / 42)
 
 
 

@@ -88,17 +88,39 @@ for x in range(1, 2031):
         print(x)
         break
 '''
+#---------------6-----------------
+"""
+def ss36(s):
+    alf = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    return alf.index(s)
 
 
 
+alf = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
+for x in alf:
+    if (int("NEW", 36) + int("YE" + x + "R", 36)) % 35 == 0:
+        print((int("NEW", 36) + int("YE" + x + "R", 36)) / 35)
+        break
+"""
+#----------------7---------------
+"""
+def f4(n):
+    if n == 0:
+        return "0"
+    res = ""
+    while n:
+        res = res + str(n % 4)
+        n = n // 4
+    return res[::-1]
 
-
-
-
-
-
-
+for i in range(205, -5, -1):
+    res = ""
+    ii = i
+    i = f4(i)
+    if i[-3:] == "123":
+        print(i, ii)
+"""
 
 
 

@@ -347,6 +347,7 @@ print(20, bin(20)[2:].zfill(8))
 print(int("11100000", 2))
 """
 #----------------26--------------
+"""
 from ipaddress import *
 
 net = ip_network("115.192.0.0/255.192.0.0", False)
@@ -357,18 +358,30 @@ for ip in net:
     if ip.count("1") % 3 != 0:
         c += 1
 print(c)
+"""
+#--------27----------
+"""
+uzl1 = 174.215.202.10110101
+uzl2 = 174.215.202.10010011
+sett = 174.215.202.11000000
 
+print(181, bin(181)[2:])
+print(147, bin(147)[2:])
+print(2 ** 6 - 2 - 2)
+"""
+#----------28------------
+"""
+from ipaddress import *
 
+net = ip_network("192.168.76.160/255.255.255.240", False)
 
-
-
-
-
-
-
-
-
-
+c = 0
+for ip in net:
+    ip = bin(int(ip))[2:]
+    if ip[-1] == "0" and ip[24:].count("1") % 2 == 0:
+        c += 1
+print(c)
+"""
 
 
 

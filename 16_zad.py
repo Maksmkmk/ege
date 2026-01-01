@@ -181,7 +181,7 @@ for i in range(100_000, 10, -1):
 print(f(94) - f(80))
 """
 #--------------12---------------
-
+"""
 from functools import *
 
 @lru_cache(None)
@@ -194,8 +194,28 @@ for i in range(5000):
     f(i)
 
 print(f(4444)/f(4400))
+"""
+#-------------13--------------
+"""
+from functools import *
 
+@lru_cache(None)
+def f(n):
+    if n >= 2024:
+        return 1
+    return f(n + 2) + f(n + 4)
 
+for i in range(3000, 0, -1):
+    f(i)
+
+a = set()
+for i in range(150000, -100000, -1):
+    if i > 0:
+        a.add(f(i))
+
+print(len(a))
+"""
+#-----------14--------------
 
 
 

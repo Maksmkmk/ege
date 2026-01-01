@@ -216,7 +216,7 @@ for x in range(-10, 10):
 mainloop()
 """
 #-----------7---------------
-
+"""
 from turtle import *
 
 z = 20
@@ -251,10 +251,67 @@ for i in range(3):
 screensize(4000, 4000)
 
 mainloop()
+"""
+#----------------8---------------
+"""
+from turtle import *
 
+speed(1000)
+z = 30
 
+for i in range(25):
+    fd(10 * z)
+    rt(90)
+    fd(5 * z)
+    rt(90)
 
+pu()
 
+fd(7 * z)
+rt(120)
+
+pd()
+
+for i in range(6):
+    fd(5 * z)
+    rt(120)
+
+for x in range(-10, 10):
+    for y in range(-10, 10):
+        pu()
+        goto(x * z, y * z)
+        dot(3, "gray")
+
+mainloop()
+"""
+#---------------9--------------
+"""
+from turtle import *
+
+speed(1000)
+z = 40
+
+for i in range(6):
+    fd(7 * z)
+    rt(120)
+pu()
+fd(3 * z)
+rt(90)
+pd()
+for i in range(8):
+    fd(5 * z)
+    rt(90)
+for x in range(-10, 10):
+    for y in range(-10, 10):
+        pu()
+        goto(x * z, y * z)
+        dot(5, "gray")
+
+mainloop()
+"""
+#------------10-----------
+
+from turtle import *
 
 
 

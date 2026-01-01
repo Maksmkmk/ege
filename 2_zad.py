@@ -209,6 +209,8 @@ for x in range(2):
                 if ( (x or (y == z)) and (not(w <= y)) ):
                     print(x, y, z, w)
 """
+#---------------19-----------------
+"""
 print("x y z w")
 for x in [0, 1]:
     for y in [0, 1]:
@@ -216,6 +218,18 @@ for x in [0, 1]:
             for w in [0, 1]:
                 if (not ((z <= x) and (w or y) and (not(w == x)))) == 0:
                     print(x, y, z, w)
+"""
+#---------------20-------------
+print("x y z w")
+for x in range(2):
+    for y in range(2):
+        for z in range(2):
+            for w in range(2):
+                print(x, y, z, w, int( ((1 == w) == (not((w and x) or y))) <= z))
+
+
+
+
 
 
 

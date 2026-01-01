@@ -307,7 +307,7 @@ for i in product("АГИЛМОРТ", repeat=5):
         break
 """
 #----------------22------------------
-
+"""
 from itertools import *
 
 c = 0
@@ -317,21 +317,65 @@ for i in product("КОСУФ", repeat=5):
     if "Ф" not in i and i.count("У") == 2:
         last = c
 print(last)
+"""
+#---------------23---------------
+"""
+from itertools import *
 
+c = 0
+for i in permutations("КАБИНЕТ"):
+    i = "".join(i)
+    if i[-1] not in "АИЕ":
+        c += 1
+        print(c, i)
+print(c)
+"""
+#--------------24---------------
+"""
+from itertools import *
+a = set()
+for i in product("ГИРЛЯНДА", repeat=9):
+    i = "".join(i)
+    if i.count("А") == 1 and "АГ" not in i and "АР" not in i and "АЛ" not in i and "АН" not in i and "АД" not in i and "ГА" not in i and "РА" not in i and "ЛА" not in i and "НА" not in i and "ДА" not in i:
+        a.add(i)
+print(a)
+print(len(a))
+"""
+#---------------25--------------
+"""
+from itertools import *
+a = set()
+for i in product("СНЕГУРОЧКА", repeat=9):
+    i = "".join(i)
+    if i.count("С") + i.count("Н") + i.count("Г") + i.count("Р") + i.count("Ч") + i.count("К") == 3:
+        a.add(i)
+print(a, len(a))
+"""
+#---------26-----------
+"""
+from itertools import *
+c = 0
+for i in product("0123456789ABCDEF", repeat=8):
+    i = "".join(i)
+    if i.count("0") == 2:
+        if i[0] != "0":
+            if i[-1] in "02468ACE":
+                c += 1
+print(c)
+"""
+#-------------27----------------
+"""
+from itertools import *
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+c = 0
+for i in permutations("АРТЕМ"):
+    i = "".join(i)
+    # if not (i[0] in "АЕ" and i[-1] in "АЕ"):
+    if i[0] == "А" and i[-1] != "Е" or i[0] == "Е" and i[-1] != "А" or i[0] not in "АЕ":
+        c += 1
+        print(c, i)
+"""
+#-------------28--------------
 
 
 

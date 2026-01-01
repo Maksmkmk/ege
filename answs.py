@@ -1,16 +1,11 @@
-print(8 * 12 + 14 * 6 - 8)
-
-print(10 * 8 + 9 * 6 + 36)
-
-"""
-
-3333
-467
-4
-2313
-170
-4194304
-2796202
+from itertools import *
+a = set()
+for i in product("СНЕГУРОЧКА", repeat=1):
+    i = "".join(i)
+    if i.count("С") + i.count("Н") + i.count("Г") + i.count("Р") + i.count("Ч") + i.count("К") == 3:
+        a.add(i)
+print(a)
+print(len(a))
 
 
-"""
+

@@ -97,7 +97,7 @@ for i in data:
             break
 """
 #----------7--------------
-
+"""
 f = open("9.txt")
 
 data = [list(map(int, s.split())) for s in f]
@@ -109,9 +109,18 @@ for i in data:
         if 5 * (min(i) + max(i)) >= 3 * (sum(i) - max(i) - min(i)):
             c += 1
             print(c, i)
+"""
+#-------------8-----------------
+f = open("9.txt")
 
+data = [list(map(int, s.split())) for s in f]
 
-
+c = 0
+for i in data:
+    if (sum(i) - min(i) - max(i)) / 3 >= 8:
+        c += 1
+        print(i, c)
+print(c)
 
 
 

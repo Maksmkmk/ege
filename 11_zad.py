@@ -176,6 +176,7 @@ for x in range(1, 100):
 print(last)
 """
 #--------------14---------------
+"""
 from math import *
 
 for A in range(1, 100):
@@ -187,12 +188,17 @@ for A in range(1, 100):
     if V >= 432 * 2 ** 23:
         print(A)
         break
+"""
+#-------------15-----------------
+from math import *
 
-
-
-
-
-
+l = 8
+A = 7
+i = ceil(log2(A))
+I = ceil(l * i / 8) # байты
+N = 42
+V = N * I + N * 8
+print(V)
 
 
 
