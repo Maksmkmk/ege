@@ -111,4 +111,91 @@ for n in range(1000, 0, -1):
         print(n)
         break
 """
+#-------------8-------------
+"""
+def f(n):
+    r = bin(n)[2:]
+    if n % 3 == 0:
+        r += r[-3:]
+    else:
+        x = n % 3
+        x += 1
+        x *= 3
+        x = bin(x)[2:]
+        r += x
+    return int(r, 2)
+
+answ = []
+for n in range(1000):
+    if f(n) <= 416:
+        print(f(n))
+
+        answ += [f(n)]
+
+print(max(answ))
+"""
+#----------------9--------------
+"""
+def f(n):
+    r = bin(n)[2:]
+    if n % 3 == 0:
+        r += r[-3:]
+    else:
+        r += bin((n % 3) * 3)[2:]
+    return int(r, 2)
+
+for n in range(1000):
+    if f(n) >= 200:
+        print(n)
+        break
+
+print(f(26))
+"""
+#------------------10------------------
+"""
+def f(k):
+    lst = [int(x) for x in str(k)]
+    s = sum(lst)
+    m = max(lst)
+    n = min(lst)
+    p1 = s - m
+    p2 = s - n
+    mx = max(p1, p2)
+    mn = min(p1, p2)
+    l = int(str(mx) + str(mn))
+    return l
+
+for k in range(1000, 10000):
+    if f(k) == 2013:
+        print(k)
+        break
+"""
+#-----------------11----------------
+"""
+def f(n):
+    r = bin(n)[2:]
+    if r[-3:].count("1") % 2 == 0:
+        r += "10"
+    else:
+        r = "1" + r + "0"
+    return int(r, 2)
+
+a = []
+for i in range(1000):
+    if f(i) > 880:
+        a += [f(i)]
+
+print(min(a))
+"""
+
+
+
+
+
+
+
+
+
+
+
 

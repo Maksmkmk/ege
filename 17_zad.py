@@ -125,13 +125,44 @@ for i in range(len(data) - 1):
             answs.append(e1 + e2)
 print(len(answs), max(answs))
 """
+#--------------9--------------
+"""
+f = open("17.txt")
 
+data = [int(s) for s in f]
+mx = max([s for s in data if len(str(abs(s))) == 2])
+answs = []
 
+for i in range(len(data) - 1):
+    e1 = data[i]
+    e2 = data[i + 1]
+    if len(str(abs(e1))) == 2 or len(str(abs(e2))) == 2:
+        if e1 + e2 <= mx:
+            answs += [e1 + e2]
 
+print(len(answs), max(answs))
+"""
+#-------------10-------------
+"""
+f = open("17.txt")
 
+data = [int(x) for x in f]
 
+mn = min([x for x in data if abs(x) % 1000 == 250])
 
+answ = []
 
+for i in range(len(data) - 3):
+    e1 = data[i]
+    e2 = data[i + 1]
+    e3 = data[i + 2]
+    if e1 % 2 == 0 and e2 % 2 == 0 and e3 % 2 == 0:
+        if sum([e1, e2, e3]) > mn:
+            answ += [sum([e1, e2, e3])]
+
+print(len(answ), max(answ))
+"""
+#-----------11----------
 
 
 

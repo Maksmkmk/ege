@@ -136,9 +136,18 @@ print("20)", [s for s in range(200, 35, -1) if (f(s, 4) or f(s, 2)) and (not(f(s
 # 77
 """
 #----------------9----------------
+"""
+def f(stones, moves):
+    if stones <= 76: return moves % 2 == 0
+    if moves == 0: return False
+    hods = [f(stones - 3, moves - 1), f(stones - 5, moves - 1), f(stones // 4, moves - 1)]
+    return any(hods) if moves % 2 != 0 else all(hods)
 
-
-
+print("19)", [s for s in range(1000, 77 - 1, -1) if f(s, 2)])
+print("20)", [s for s in range(1000, 77 - 1, -1) if not f(s, 1) and f(s, 3)])
+print("20)", [s for s in range(1000, 77 - 1, -1) if (f(s, 2) or f(s, 4)) and (not(f(s, 2)))])
+"""
+#-------------10-------------
 
 
 

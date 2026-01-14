@@ -310,8 +310,163 @@ for x in range(-10, 10):
 mainloop()
 """
 #------------10-----------
+"""
+from turtle import *
+
+z = 20
+tracer(0)
+lt(90)
+
+
+
+lt(90)
+pd()
+for i in range(4):
+    fd(9 * z)
+    lt(180)
+    backward(10 * z)
+    rt(90)
+pu()
+backward(7 * z)
+lt(90)
+fd(3 * z)
+rt(90)
+pd()
+for i in range(2):
+    fd(17 * z)
+    lt(90)
+    fd(20 * z)
+    lt(90)
+
+pu()
+for x in range(-30, 30):
+    for y in range(-30, 30):
+        goto(x * z, y * z)
+        dot(4, "gray")
+
+screensize(2000, 2000)
+
+mainloop()
+"""
+#------------11-----------
+"""
+from turtle import *
+
+lt(90)
+z = 20
+tracer(0)
+
+for i in range(2):
+    fd(14 * z)
+    lt(270)
+    backward(12 * z)
+    rt(90)
+pu()
+
+fd(9 * z)
+rt(90)
+backward(7 * z)
+lt(90)
+
+pd()
+
+for i in range(2):
+    fd(13 * z)
+    rt(90)
+    fd(6 * z)
+    rt(90)
+
+
+pu()
+for x in range(-30, 30):
+    for y in range(-30, 30):
+        goto(x * z, y * z)
+        dot(4, "gray")
+
+
+
+screensize(2000, 2000)
+
+mainloop()
+"""
+#--------------------12------------------
+"""from turtle import *
+
+z = 20
+tracer(0)
+
+for i in range(2):
+    fd(9 * z)
+    rt(90)
+    fd(5 * z)
+    rt(270)
+
+backward(18 * z)
+lt(90)
+fd(10 * z)
+rt(90)
+
+pu()
+
+fd(5 * z)
+rt(90)
+fd(3 * z)
+lt(90)
+
+pd()
+
+for i in range(4):
+    fd(8 * z)
+    rt(90)
+
+pu()
+
+for x in range(-30, 30):
+    for y in range(-30, 30):
+        goto(x * z, y * z)
+        if y == 0 or x == 0:
+            dot(5, "black")
+        else:
+            dot(3, "gray")
+
+
+mainloop()
+"""
+#------------------------13-----------------------
 
 from turtle import *
+
+z = 20
+tracer(0)
+
+for i in range(2):
+    fd(17 * z)
+    lt(90)
+    fd(34 * z)
+    lt(90)
+pu()
+fd(10 * z)
+rt(90)
+fd(15 * z)
+rt(90)
+pd()
+for i in range(2):
+    fd(40 * z)
+    rt(90)
+    fd(24 * z)
+    rt(90)
+
+pu()
+for x in range(-30, 30):
+    for y in range(-30, 30):
+        goto(x * z, y * z)
+        if x == 0 or y == 0:
+            dot(5, "black")
+        else:
+            dot(3, "gray")
+
+mainloop()
+
 
 
 

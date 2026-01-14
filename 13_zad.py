@@ -464,7 +464,7 @@ uzl2 = 151.172.115.10011100
 mask = 255.255.255.
 """
 #------------36------------
-
+"""
 from ipaddress import *
 
 net = ip_network("172.16.160.0/255.255.240.0", False)
@@ -477,11 +477,26 @@ for ip in net:
         c += 1
         print(i, ip, int(i))
 print(c)
+"""
+#------------36------------
+"""
+from ipaddress import *
 
+net = ip_network("77.180.176.14/255.255.254.0", False).hosts()
 
+for ip in net:
+    print(ip)
+"""
+#------------37-----------
+"""
+from ipaddress import *
 
+net = ip_network("153.196.115.75/255.248.0.0", False)
 
-
+for ip in net:
+    print(ip)
+"""
+#---------------38---------------
 
 
 

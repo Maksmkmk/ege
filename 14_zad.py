@@ -122,7 +122,7 @@ for i in range(205, -5, -1):
         print(i, ii)
 """
 #---------------8--------------
-
+"""
 def f5(n):
     if n == 0:
         return "0"
@@ -145,10 +145,64 @@ for x in range(2031):
         answs.append(x)
 
 print(min(answs))
+"""
+#-----------9----------
+"""
+def f(n, ss):
+    s = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    r = ""
+    while n > 0:
+        r += s[n % ss]
+        n //= ss
+    return r[::-1]
 
+x = 5 * 512 ** 1000 + 256 ** 1001 - 128 ** 1002+ 64 ** 1003 - 7 * 32 ** 1004 - 5120
 
+x = f(x, 32)
 
+print(str(x).count("1") + str(x).count("2") + str(x).count("3") + str(x).count("4") + \
+      str(x).count("5") + str(x).count("6") + str(x).count("7") + str(x).count("8") + \
+      str(x).count("9") + str(x).count("0"))
+"""
+#----------10----------
+"""
+def f(n, ss):
+    s = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    r = ""
+    while n:
+        r += str(s[n % ss])
+        n //= ss
+    return r[::-1]
 
+x = 3 * 2187 ** 1801 + 729 ** 2000 - 4 * 243 ** 2 100 + 81 ** 2200 - 2 * 27 ** 2400 - 13122
+
+c = 0
+for i in f(x, 27):
+    if i not in "012345678":
+        c += 1
+print(c)
+"""
+#--------------11-------------
+"""
+def f32(n):
+    r = ""
+    s = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    while n:
+        r += str(s[n % 32])
+        n //= 32
+    return r[::-1]
+
+x = 3 * 512 ** 1500 + 256 ** 1501 - 2 * 128 ** 1502 + 64 ** 1503 - 3 * 32 ** 1504 - 10240
+
+x = f32(x)
+
+c = 0
+for i in x:
+    if int(i, 32) <= 9:
+        c += 1
+print(c)
+"""
+#---------------------12-------------------
 
 
 

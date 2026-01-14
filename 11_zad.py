@@ -189,7 +189,8 @@ for A in range(1, 100):
         print(A)
         break
 """
-#-------------15-----------------
+#-------------15---------------
+"""
 from math import *
 
 l = 8
@@ -199,6 +200,40 @@ I = ceil(l * i / 8) # байты
 N = 42
 V = N * I + N * 8
 print(V)
+"""
+#--------------16------------
+"""
+from math import *
+
+for l in range(100):
+    A = 10 + 70
+    i = ceil(log2(A))
+    V = ceil(l * i / 8)
+    if 1_234_567 * V > 24 * 2 ** 20:
+        print(l)
+        break
+"""
+#---------------------17--------------------
+
+from math import *
+
+for A in range(1, 1000):
+    l = 21
+    i = ceil(log2(A))
+    k = 1_222_333
+    V = ceil(l * i / 8) * k
+    if V >= 30 * 2 ** 20:
+        print(A, i)
+        break
+
+
+
+
+
+
+
+
+
 
 
 

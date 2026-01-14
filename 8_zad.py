@@ -376,11 +376,66 @@ for i in permutations("АРТЕМ"):
         print(c, i)
 """
 #-------------28--------------
+"""
+from itertools import *
 
+c = 0
+answ = []
+for i in product(sorted("СТРЕЛА"), repeat=5):
+    i = "".join(i)
+    c += 1
+    if c % 2 == 0:
+        if i[0] not in "АСТ":
+            if i.count("Л") == 2:
+                if "ЛЛ" not in i:
+                    answ += [[c, i]]
+print(max(answ))
+"""
+#-----------29----------
+"""
+from itertools import *
 
+c = 0
+for i in product(sorted("СТРОКА"), repeat=5):
+    c += 1
+    i = "".join(i)
+    if c % 2 == 0 and i[0] not in "АСТ" and i.count("О") == 2:
+        print(c, i)
+"""
+#------------30------------
+"""
+from itertools import *
 
+c = 0
+for i in product(sorted("МОСКВА"), repeat=6):
+    c += 1
+    i = "".join(i)
+    if c % 2 != 0:
+        if i[0] not in "АВК":
+            if i.count("М") == 2:
+                print(c, i)
+                break
+"""
+#----------31---------
 
+from itertools import *
 
+c = 0
+for i in product("012345678", repeat=7):
+    i = "".join(i)
+    if i[0] != "0":
+        if i[-1] not in "356":
+            if "000" not in i:
+                if "111" not in i:
+                    if "222" not in i:
+                        if "333" not in i:
+                            if "444" not in i:
+                                if "555" not in i:
+                                    if "666" not in i:
+                                        if "777" not in i:
+                                            if "888" not in i:
+                                                c += 1
+print(c)
 
 
 
