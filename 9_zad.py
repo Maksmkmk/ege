@@ -12,6 +12,8 @@ for i in data:
             last = c
 print(last)
 """
+import shlex
+
 #-------------2-----------------
 """
 f = open("9.txt")
@@ -110,7 +112,8 @@ for i in data:
             c += 1
             print(c, i)
 """
-#-------------8-----------------
+#-------------8--------------
+"""
 f = open("9.txt")
 
 data = [list(map(int, s.split())) for s in f]
@@ -121,18 +124,51 @@ for i in data:
         c += 1
         print(i, c)
 print(c)
+"""
+#-------------9--------------
+"""
+f = open("9.txt")
 
+data = [list(map(int, s.split())) for s in f]
 
+c = 0
+for i in data:
+    if max(i) < sum(i) - max(i):
+        if i[0] + i[1] == i[2] + i[3] or i[0] + i[2] == i[1] + i[3] or i[0] + i[3] == i[2] + i[1]:
+            c += 1
+print(c)
+"""
+#-------------10------------
+"""
+f = open("9.txt")
 
+data = [list(map(int, s.split())) for s in f]
+last = 0
+c = 0
+for i in data:
+    c += 1
+    cntr = [i.count(x) for x in i]
+    if cntr.count(3) == 3 and cntr.count(1) == 4:
+        pov = [x for x in i if i.count(x) > 1]
+        nepov = [x for x in i if i.count(x) == 1]
+        if sum(nepov) / len(nepov) <= pov[0]:
+            last = sum(i)
+print(last)
+"""
+#--------------11-------------
 
+f = open("9.txt")
 
+data = [list(map(int, s.split())) for s in f]
 
-
-
-
-
-
-
+c = 0
+for i in data:
+    cntr = [i.count(x) for x in i]
+    if cntr.count(2) == 2 and cntr.count(1) == 3:
+        i = sorted(i)
+        if (i[0] + i[-1]) ** 2 < i[1] ** 2 + i[2] ** 2 + i[3] ** 2:
+            c += 1
+print(c)
 
 
 

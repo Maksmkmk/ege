@@ -99,6 +99,7 @@ for i in range(2026, 10**10, 2026):
         print(i, int(int(i)/2026))
 """
 #--------------6-------------
+"""
 from fnmatch import *
 
 c = 0
@@ -107,6 +108,64 @@ for i in range(10000000038, 0, -42):
     if fnmatch(i, "48*15*0") and c < 6:
         c += 1
         print(c, i, int(i) / 42)
+"""
+#--------------7--------------
+
+def m(n):
+    a = set()
+    for i in range(1, int(n ** 0.5) + 1):
+        if  n % i == 0:
+            a.add(i)
+            a.add(n // i)
+    a = sorted(a)
+    for i in a:
+        if i % 10 == 7 and i != n and i != 7:
+            return n, i
+    return False
+
+c = 0
+for i in range(700_000, 700_000 + 1000):
+    if m(i):
+        print(*m(i))
+        c += 1
+    if c == 5:
+        break
+
+print()
+
+#--------------------8------------------
+
+def m(n):
+    a = set()
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            a.add(i)
+            a.add(n // i)
+    if a:
+        return min(a) + max(a)
+    return 0
+
+c = 0
+for i in range(220_000, 220_000 + 1000):
+    if m(i):
+        if m(i) % 10 == 4:
+            print(i, m(i))
+            c += 1
+    if c == 5:
+        break
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

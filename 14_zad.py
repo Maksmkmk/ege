@@ -121,6 +121,30 @@ for i in range(205, -5, -1):
     if i[-3:] == "123":
         print(i, ii)
 """
+#---------------8--------------
+
+def f5(n):
+    if n == 0:
+        return "0"
+    res = ""
+    while n:
+        res += str(n % 5)
+        n //= 5
+    return res[::-1]
+
+mx = 0
+for x in range(1, 2031):
+    zn = f5(5 ** 100 - x)
+    if zn.count("0") > mx:
+        mx = zn.count("0")
+
+answs = []
+for x in range(2031):
+    zn = f5(5 ** 100 - x)
+    if zn.count("0") == mx:
+        answs.append(x)
+
+print(min(answs))
 
 
 

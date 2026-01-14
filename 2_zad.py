@@ -220,23 +220,74 @@ for x in [0, 1]:
                     print(x, y, z, w)
 """
 #---------------20-------------
+"""
 print("x y z w")
 for x in range(2):
     for y in range(2):
         for z in range(2):
             for w in range(2):
                 print(x, y, z, w, int( ((1 == w) == (not((w and x) or y))) <= z))
+"""
+#---------------21--------------
+"""
+def f(x, y, z, w):
+    return not((((((w and x) == x) or True) <= z) or (not(x))) and y)
 
+print("x y z w")
+for x in range(2):
+    for y in range(2):
+        for z in range(2):
+            for w in range(2):
+                if f(x, y, z, w) == 0:
+                    print(x, y, z, w)
+"""
+"""
+# выбираем ёлку
+height = 6  # высота
+trunk_width = 3  # ширина ствола
 
+# решаем, куда поставить
+offset = 10  # сдвиг вправо
 
+# вешаем звезду
+print(' ' * (height - 1 + offset) + '★')
 
+# расправляем ветки
+for i in range(1, height + 1):
+    line = ''
+    for j in range(2*i - 1):
+        # вешаем игрушки
+        line += '*' if j % 2 == 0 else 'o'
+    print(' ' * (height - i + offset) + line)
 
+# Дед Мороз принёс подарки
+print(' ' * (height - trunk_width//2 - 1 + offset - 2) + '🎁' + '|' * trunk_width + '🎁')
 
+# новогоднее поздравление
+print("\nС Новым годом, друзья! 🎉")
+print("Желаем, чтобы в 2026-м радость крутилась в бесконечном цикле, а экзамены запускались, как идеальный код, с первого раза и без ошибок.")
+"""
+#--------------22------------
+"""
+print("a b c d")
+for a in 1,0:
+    for b in 1,0:
+        for c in 1,0:
+            for d in 1,0:
+                f = ((a == b) or (not(c == d))) and (b <= (not c))
+                if f == 0:
+                    print(a, b, c, d)
+"""
+#-------------23------------
 
+print("x y z w")
 
-
-
-
+for x in range(2):
+    for y in range(2):
+        for z in range(2):
+            for w in range(2):
+                if (  (z == (not(y))) and ((not(x)) or y) and w  ):
+                    print(x, y, z, w)
 
 
 

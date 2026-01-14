@@ -382,6 +382,110 @@ for ip in net:
         c += 1
 print(c)
 """
+#--------------29-------------
+"""
+from ipaddress import *
+
+net = ip_network("52.52.52.52/255.255.240.0", False).hosts()
+
+c = 0
+for ip in net:
+    c += 1
+print(c)
+"""
+#----------------30---------------
+"""
+from ipaddress import *
+
+net = ip_network("192.168.32.160/255.255.255.240")
+
+c = 0
+for ip in net:
+    ip = bin(int(ip))[2:]
+    if ip.count("0") > 21:
+        c += 1
+print(c)
+"""
+#-------------------31-------------------
+"""
+from ipaddress import *
+
+net = ip_network("165.44.96.0/255.255.248.0")
+
+c = 0
+for ip in net:
+    ip = bin(int(ip))[2:]
+    if "111" in ip:
+        c += 1
+print(c)
+"""
+#------------32----------
+"""
+from ipaddress import *
+
+net = ip_network("87.226.26.72/255.255.255.252", False)
+
+c = 0
+for ip in net:
+    ip = bin(int(ip))[2:].zfill(32)
+    print(ip)
+    if ip.count("0") % 2 == 0:
+        c += 1
+print(c)
+"""
+#---------------33---------------
+"""
+from ipaddress import *
+
+net = ip_network("218.194.82.148/255.255.255.192", False).hosts()
+
+last = 0
+for ip in net:
+    last = ip
+print(last)
+"""
+#------------34-----------
+"""
+from ipaddress import *
+
+net = ip_network("123.222.111.192/255.255.255.248", False)
+
+c = 0
+for ip in net:
+    ip = bin(int(ip))[2:].zfill(32)
+    if ip[24:].count("1") % 3 != 0:
+        c += 1
+print(c)
+"""
+#-------------35------------
+"""
+uzl1 = 151.172.115.01111001
+uzl2 = 151.172.115.10011100
+mask = 255.255.255.
+"""
+#------------36------------
+
+from ipaddress import *
+
+net = ip_network("172.16.160.0/255.255.240.0", False)
+
+c = 0
+for ip in net:
+    i = ip
+    ip = bin(int(ip))[2:]
+    if ip.count("1") % 3 == 0:
+        c += 1
+        print(i, ip, int(i))
+print(c)
+
+
+
+
+
+
+
+
+
 
 
 
